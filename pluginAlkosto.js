@@ -408,3 +408,106 @@ function createStyles(){
     document.head.appendChild(styleDoc);
 };
 
+/** Envío de Data por medio del dataLayer */
+function eventsDataLayer(company){
+
+    let OSdevice;
+
+    if(navigator.userAgent.includes('Android')) OSdevice='Android';
+    else if ( navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')) OSdevice="IOS";
+    else OSdevice='unKnowed'
+
+    /** Evento de visualización */
+    dataLayer.push({
+        'event':'Visualización de botones Mudi',
+        'valorMudi':1,
+        'sku':skuNumber,
+        'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
+        'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
+        'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
+        'retail':company
+    });
+
+    /** Envío de click para medir intención de compra */
+    document.getElementById('addToCartButton').addEventListener('click',()=>{
+        dataLayer.push({
+            'event':'Intención de compra Mudi',
+            'valorMudi':1,
+            'sku':skuNumber,
+            'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
+            'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
+            'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
+            'retail':company
+        });
+    },false);
+
+    /** Envío de interacción AR Desk */
+    document.querySelector('[data-target="#vrMudi"]').addEventListener('click',()=>{
+        dataLayer.push({
+            'event':'click BTN QR Mudi',
+            'dispositivo':'DeskTop',
+            'valorMudi':1,
+            'sku':skuNumber,
+            'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
+            'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
+            'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
+            'retail':company
+        });
+    },false);
+
+    /** Envío de interacción 3D Desk */
+    document.querySelector('[data-target="#3dMudi"]').addEventListener('click',()=>{
+        dataLayer.push({
+            'event':'click BTN 3D Mudi',
+            'dispositivo':'DeskTop',
+            'valorMudi':1,
+            'sku':skuNumber,
+            'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
+            'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
+            'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
+            'retail':company
+        });
+    },false);
+
+    /** Envío de interacción AR Mobile */
+    document.querySelector('[data-target="#vrMudimobile"]').addEventListener('click',()=>{
+        dataLayer.push({
+            'event':'click BTN AR Mudi',
+            'dispositivo':'Mobile',
+            'sistemaOperativo':OSdevice,
+            'valorMudi':1,
+            'sku':skuNumber,
+            'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
+            'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
+            'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
+            'retail':company
+        });
+    },false);
+
+    /** Envío de interacción 3D Mobile */
+    document.querySelector('[data-target="#3dMudimobile"]').addEventListener('click',()=>{
+        dataLayer.push({
+            'event':'click BTN 3D Mudi',
+            'dispositivo':'Mobile',
+            'sistemaOperativo':OSdevice,
+            'valorMudi':1,
+            'sku':skuNumber,
+            'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
+            'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
+            'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
+            'retail':company
+        });
+    },false);
+
+}
+
+/** Función Main -- inicializadora de la experiencia */
+const MudiExperience = async(companyName) => {
+    const responseServer = await serverData({token:'BxC9UYtJENQgD5RjDt2A',sku:skuNumber});
+    if(!responseServer) return console.warn(`El producto identificado con SKU: "%c${skuNumber}%c" en la base de datos de Mudi, no existe.\n Revise bien los parámetros de construcción; Si está seguro de que el producto cuenta con la tecnología comuníquese con el equipo técnico de Mudi 3D&AR Commerce\n Gracias!`, 'color: red; font-weight: bold;', 'color: initial;');
+
+    else{ createStyles(); createBtns(); createModals(); eventsDataLayer(companyName)};
+};
+
+/** Incializamos la experiencia */
+MudiExperience('Alkosto');
