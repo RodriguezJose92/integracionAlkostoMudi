@@ -1,7 +1,7 @@
 
 Integración de Mudi 3D & AR Commerce
 
-Este script facilita la integración de las funcionalidades de Mudi 3D & AR Commerce en un sitio web minorista en línea. Mudi ofrece experiencias inmersivas como realidad aumentada (AR) y visualización de productos en 3D para mejorar la interacción del usuario con los productos.
+Este script facilita la integración de las funcionalidades de Mudi 3D & AR Commerce en un sitio web en línea. Mudi ofrece experiencias inmersivas como realidad aumentada (AR) y visualización de productos en 3D para mejorar la interacción del usuario con los productos.
 
 Cómo utilizar:
 Incluir el Script:
@@ -9,8 +9,8 @@ Incluir el Script:
 Copia el script proporcionado e inclúyelo en la página de detalles del producto (PDP) de tu sitio web.
 Inicialización:
 
-Llama a la función MudiExperience con el nombre del minorista como parámetro para inicializar la experiencia de Mudi.
-Ejemplo: MudiExperience('Alkosto');
+Llama a la función MudiExperience con el nombre como parámetro para inicializar la experiencia de Mudi.
+Ejemplo: MudiExperience('nombre de tu tienda');
 Funcionalidad:
 
 El script obtiene el SKU (Stock Keeping Unit) del producto desde la página.
