@@ -1,6 +1,5 @@
 /** Tomamos el valor del SKU de la PDP */
-// let skuNumber = document.querySelector('.js-ean-pdp').innerHTML;
-let skuNumber = 757638387996
+let skuNumber = document.querySelector('.js-ean-pdp').innerHTML;
 
 /** Se hace la petición al servidor Mudi */
 async function serverData ({
