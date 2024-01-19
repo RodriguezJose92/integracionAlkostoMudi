@@ -1,5 +1,6 @@
 /** Tomamos el valor del SKU de la PDP */
-let skuNumber = document.querySelector('.js-ean-pdp').innerHTML;
+// let skuNumber = document.querySelector('.js-ean-pdp').innerHTML;
+let skuNumber = 757638387996
 
 /** Se hace la petición al servidor Mudi */
 async function serverData ({
@@ -38,13 +39,13 @@ function createBtns (){
       <!-- BUTTON AR -->
       <a type="button" data-toggle="modal" data-target="#vrMudi">
         <img class="img-responsive img-interaction" loading="lazy"
-          src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2022/mudi/ar-img.svg"
+          src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/mudi/ar-img.svg"
           alt="Ver producto en realidad aumentada" style="height:80px !important"/>
       </a>
       <!-- BUTTON 3D -->
       <a type="button" data-toggle="modal" data-target="#3dMudi">
         <img class="img-responsive img-interaction" loading="lazy"
-          src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2022/mudi/3d-img.svg" alt="Ver producto en 3D"  style="height:80px !important"/>
+          src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/mudi/3d-img.svg" alt="Ver producto en 3D"  style="height:80px !important"/>
       </a>
     </div>
 
@@ -53,13 +54,13 @@ function createBtns (){
       <!-- BUTTON AR -->
       <a type="button" data-toggle="modal" data-target="#vrMudimobile">
         <img class="img-responsive img-interaction" loading="lazy"
-          src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2022/mudi/ar-img.svg"
+          src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/mudi/ar-img.svg"
           alt="Ver producto en realidad aumentada"  style="height:75px !important" />
       </a>
       <!-- BUTTON 3D -->
       <a type="button" data-toggle="modal" data-target="#3dMudimobile">
         <img class="img-responsive img-interaction" loading="lazy"
-          src="https://media.aws.alkosto.com/ymarketingcolcomercio/Alkosto/2022/mudi/3d-img.svg" alt="Ver producto en 3D" style="height:75px !important"  />
+          src="https://media.aws.alkomprar.com/ymarketingcolcomercio/Alkosto/2022/mudi/3d-img.svg" alt="Ver producto en 3D" style="height:75px !important"  />
       </a>
     </div>`;
 };
