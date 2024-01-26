@@ -249,7 +249,7 @@ const MudiExperience = async(companyName) => {
 
 };
 
-MudiExperience('Alkosto')
+
 
 
 
