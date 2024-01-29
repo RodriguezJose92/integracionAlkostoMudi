@@ -1,3 +1,5 @@
+/** Codigo integración Mudi */
+
 /** Tomamos el valor del SKU de la PDP */
 let skuNumber = document.querySelector('.js-ean-pdp').innerHTML;
 

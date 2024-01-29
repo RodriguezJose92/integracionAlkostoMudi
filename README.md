@@ -1,4 +1,4 @@
-
+/_ codigo integración Mudi _/
 Integración de Mudi 3D & AR Commerce
 
 Este script facilita la integración de las funcionalidades de Mudi 3D & AR Commerce en un sitio web en línea. Mudi ofrece experiencias inmersivas como realidad aumentada (AR) y visualización de productos en 3D para mejorar la interacción del usuario con los productos.
