@@ -168,11 +168,27 @@ function createModal3D(url3D){
 }
 
 /** Se crean los estilos para los elementos*/
-function createStyles(){
+function createStyles(companyName){
+
+    let urlStyles ;
+    switch(companyName){
+      case 'Alkosto':
+        urlStyles ='https://cdn.jsdelivr.net/gh/RodriguezJose92/integracionAlkostoMudi@latest/index.css';
+        break;
+      case 'Ktronix':
+        urlStyles = 'https://cdn.jsdelivr.net/gh/RodriguezJose92/integracionAlkostoMudi@latest/index.css';
+        break;
+      case 'Alkomprar': 
+        urlStyles = 'https://cdn.jsdelivr.net/gh/RodriguezJose92/integracionAlkostoMudi@latest/indexAlk.css';
+        break;
+      default : 
+        urlStyles ='https://cdn.jsdelivr.net/gh/RodriguezJose92/integracionAlkostoMudi@latest/index.css'
+    }
+
     const link = document.createElement('LINK');
     link.id='mudiStylesAlk';
     link.type="text/css"
-    link.href="https://cdn.jsdelivr.net/gh/RodriguezJose92/integracionAlkostoMudi@latest/index.css";
+    link.href=urlStyles;
     link.rel="stylesheet"
 
     document.head.appendChild(link);
