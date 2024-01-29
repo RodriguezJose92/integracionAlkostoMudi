@@ -1,5 +1,5 @@
 @media screen and (min-width:1700px) {
-    .MudiContainerBtns{
+    .MudiContainerBtns {
         display: flex;
         flex-direction: column;
         width: max-content;
@@ -7,42 +7,44 @@
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 1;
-        gap: 10px;
+        z-index: 5;
+        gap: 1em;
     }
-    
-    .btnMudiARAlk , .btnMudi3DAlk{
+
+    .btnMudiARAlk,
+    .btnMudi3DAlk {
         display: flex;
         flex-direction: row;
         width: 180px;
-        background-color: #004797;
+        background-color: var(--primary-color2);
         color: rgb(255, 255, 255);
-        border-radius: 5px;    
+        border-radius: 5px;
         cursor: pointer;
         transition: all ease-in-out .2s;
         box-shadow: -6px 6px 20px #00000036;
     }
-    
-    .btnMudiARAlk:hover , .btnMudi3DAlk:hover{
+
+    .btnMudiARAlk:hover,
+    .btnMudi3DAlk:hover {
         color: white;
         text-decoration: none;
         transform: scale(1.05);
         transition: transform ease-in-out .2s;
     }
-    
-    .circle-btn{
+
+    .circle-btn {
         border-radius: 50px;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: rgb(255, 255, 255);
-        color: #004797;
+        color: var(--primary-color2);
         border: solid white 5px;
         transform: scale(1.1) translateX(-10px);
     }
-    
-    .sect-blue{
+
+    .sect-blue {
         padding: 0;
         margin: 0;
         display: flex;
@@ -50,162 +52,164 @@
         font-weight: 600;
         font-size: 13px;
     }
-    
-    .sect-blue p{
+
+    .sect-blue p {
         padding: 0;
         margin: 0;
     }
-    
-    .alk-icon-ar-view,.alk-icon-3d-view{
+
+    .alk-icon-ar-view,
+    .alk-icon-3d-view {
         margin: 0;
         font-size: 28px;
         padding: 5px;
-        border: #004797 solid 2px;
+        border: var(--primary-color2) solid 2px;
         border-radius: 50px;
     }
+
     /* Estilos del model 3D*/
-    
-    .overlay3DModalMudi{
+
+    .overlay3DModalMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
+        background-color: rgba(0, 0, 0, 0.349);
         z-index: 10000;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudi3D{
+
+    .containerPrincipalMudi3D {
         width: 75%;
         height: 80%;
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
     }
-    
-    .headerModal3D{
+
+    .headerModal3D {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0px 20px;
         height: 10%;
     }
-    
-    .headerModal3DTitle{
+
+    .headerModal3DTitle {
         margin: 0;
         padding: 0;
         font-weight: 200;
         font-size: 18px;
     }
-    
-    .headercontainterButtonOut{
+
+    .headercontainterButtonOut {
         cursor: pointer;
         display: flex;
         align-items: center;
     }
-    
-    .headercontainterButtonOut::after{
+
+    .headercontainterButtonOut::after {
         font-family: alk-icon;
         content: "\e9aa";
-        color: #004797;
-        font-size:32px;
+        color: var(--primary-color2);
+        font-size: 32px;
         height: max-content;
         width: max-content;
     }
-    
-    .separatorMudi{
+
+    .separatorMudi {
         margin: 0;
         padding: 0;
         height: 3px;
-        background-color: #eb5b25;
+        background-color: var(--primary-color1);
         width: 100%;
     }
-    
-    .contentPrincipalModelMudi{
+
+    .contentPrincipalModelMudi {
         width: 100%;
         height: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .modelMudi3DAlk{
+
+    .modelMudi3DAlk {
         width: 100%;
         height: 100%;
         border: none;
         outline: none;
     }
-    
+
     /* estilos del modal AR  */
-    
-    .overlayARMudi{
+
+    .overlayARMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
+        background-color: rgba(0, 0, 0, 0.349);
         z-index: 10000;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudiModal{
+
+    .containerPrincipalMudiModal {
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
         width: 50%;
         height: max-content;
     }
-    
-    .headercontainter{
+
+    .headercontainter {
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .headercontainterPrincipalMudiModal{
+
+    .headercontainterPrincipalMudiModal {
         display: flex;
         justify-content: space-between;
         padding: 0px 15px;
         height: max-content;
     }
-    
-    .principalContentMudi{
+
+    .principalContentMudi {
         display: flex;
     }
-    
-    .stepsBystepsMudi{
+
+    .stepsBystepsMudi {
         width: 50%;
         padding: 5px 20px 25px 20px;
         margin: 15px 0px;
         border-right: 1px solid #8080803d;
     }
-    
-    .iconInformationMudi{
+
+    .iconInformationMudi {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    
-    .information{
+
+    .information {
         display: flex;
         justify-content: center;
         gap: 2%;
     }
-    
-    .iconAlkMudi{
+
+    .iconAlkMudi {
         font-family: 'alk-icon';
         font-size: 32px;
-        color: #004797;
+        color: var(--primary-color2);
         width: 15%;
         display: flex;
         justify-content: center;
@@ -213,47 +217,47 @@
         background-color: #f1f1f1;
         border-radius: 5px;
     }
-    
+
     .iconOne::after {
         content: "\e9b0";
     }
-    
+
     .iconTwo::after {
         content: "\e9b6";
     }
-    
+
     .iconThree::after {
         content: "\e923";
     }
-    
+
     .iconFour::after {
         content: "\e9d9";
     }
-    
-    .detailInformationMudi{
+
+    .detailInformationMudi {
         width: 83%;
         padding: 0px 10px;
         margin: 0;
         text-align: justify;
     }
-    
-    .detailStrongMudi{
-        color: #004797;
+
+    .detailStrongMudi {
+        color: var(--primary-color2);
     }
-    
-    .ARMudiContainer{
+
+    .ARMudiContainer {
         display: none;
     }
-    
-    .containerPrincipalQR{
+
+    .containerPrincipalQR {
         padding: 20px 20px 25px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
     }
-    
-    .codeMudiQR{
+
+    .codeMudiQR {
         border: none;
         outline: none;
         width: 50%;
@@ -263,7 +267,7 @@
 }
 
 @media screen and (min-width:1500px) and (max-width:1699.99px) {
-    .MudiContainerBtns{
+    .MudiContainerBtns {
         display: flex;
         flex-direction: column;
         width: max-content;
@@ -271,42 +275,44 @@
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 1;
-        gap: 10px;
+        z-index: 5;
+        gap: 1em;
     }
-    
-    .btnMudiARAlk , .btnMudi3DAlk{
+
+    .btnMudiARAlk,
+    .btnMudi3DAlk {
         display: flex;
         flex-direction: row;
         width: 180px;
-        background-color: #004797;
+        background-color: var(--primary-color2);
         color: rgb(255, 255, 255);
-        border-radius: 5px;    
+        border-radius: 5px;
         cursor: pointer;
         transition: all ease-in-out .2s;
         box-shadow: -6px 6px 20px #00000036;
     }
-    
-    .btnMudiARAlk:hover , .btnMudi3DAlk:hover{
+
+    .btnMudiARAlk:hover,
+    .btnMudi3DAlk:hover {
         color: white;
         text-decoration: none;
         transform: scale(1.05);
         transition: transform ease-in-out .2s;
     }
-    
-    .circle-btn{
+
+    .circle-btn {
         border-radius: 50px;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: rgb(255, 255, 255);
-        color: #004797;
+        color: var(--primary-color2);
         border: solid white 5px;
         transform: scale(1.1) translateX(-10px);
     }
-    
-    .sect-blue{
+
+    .sect-blue {
         padding: 0;
         margin: 0;
         display: flex;
@@ -314,162 +320,164 @@
         font-weight: 600;
         font-size: 13px;
     }
-    
-    .sect-blue p{
+
+    .sect-blue p {
         padding: 0;
         margin: 0;
     }
-    
-    .alk-icon-ar-view,.alk-icon-3d-view{
+
+    .alk-icon-ar-view,
+    .alk-icon-3d-view {
         margin: 0;
         font-size: 28px;
         padding: 5px;
-        border: #004797 solid 2px;
+        border: var(--primary-color2) solid 2px;
         border-radius: 50px;
     }
+
     /* Estilos del model 3D*/
-    
-    .overlay3DModalMudi{
+
+    .overlay3DModalMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
+        background-color: rgba(0, 0, 0, 0.349);
         z-index: 10000;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudi3D{
+
+    .containerPrincipalMudi3D {
         width: 75%;
         height: 80%;
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
     }
-    
-    .headerModal3D{
+
+    .headerModal3D {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0px 20px;
         height: 10%;
     }
-    
-    .headerModal3DTitle{
+
+    .headerModal3DTitle {
         margin: 0;
         padding: 0;
         font-weight: 200;
         font-size: 18px;
     }
-    
-    .headercontainterButtonOut{
+
+    .headercontainterButtonOut {
         cursor: pointer;
         display: flex;
         align-items: center;
     }
-    
-    .headercontainterButtonOut::after{
+
+    .headercontainterButtonOut::after {
         font-family: alk-icon;
         content: "\e9aa";
-        color: #004797;
-        font-size:32px;
+        color: var(--primary-color2);
+        font-size: 32px;
         height: max-content;
         width: max-content;
     }
-    
-    .separatorMudi{
+
+    .separatorMudi {
         margin: 0;
         padding: 0;
         height: 3px;
-        background-color: #eb5b25;
+        background-color: var(--primary-color1);
         width: 100%;
     }
-    
-    .contentPrincipalModelMudi{
+
+    .contentPrincipalModelMudi {
         width: 100%;
         height: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .modelMudi3DAlk{
+
+    .modelMudi3DAlk {
         width: 100%;
         height: 100%;
         border: none;
         outline: none;
     }
-    
+
     /* estilos del modal AR  */
-    
-    .overlayARMudi{
+
+    .overlayARMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
+        background-color: rgba(0, 0, 0, 0.349);
         z-index: 10000;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudiModal{
+
+    .containerPrincipalMudiModal {
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
         width: 60%;
         height: max-content;
     }
-    
-    .headercontainter{
+
+    .headercontainter {
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .headercontainterPrincipalMudiModal{
+
+    .headercontainterPrincipalMudiModal {
         display: flex;
         justify-content: space-between;
         padding: 0px 15px;
         height: max-content;
     }
-    
-    .principalContentMudi{
+
+    .principalContentMudi {
         display: flex;
     }
-    
-    .stepsBystepsMudi{
+
+    .stepsBystepsMudi {
         width: 50%;
         padding: 5px 20px 25px 20px;
         margin: 15px 0px;
         border-right: 1px solid #8080803d;
     }
-    
-    .iconInformationMudi{
+
+    .iconInformationMudi {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    
-    .information{
+
+    .information {
         display: flex;
         justify-content: center;
         gap: 2%;
     }
-    
-    .iconAlkMudi{
+
+    .iconAlkMudi {
         font-family: 'alk-icon';
         font-size: 32px;
-        color: #004797;
+        color: var(--primary-color2);
         width: 15%;
         display: flex;
         justify-content: center;
@@ -477,47 +485,47 @@
         background-color: #f1f1f1;
         border-radius: 5px;
     }
-    
+
     .iconOne::after {
         content: "\e9b0";
     }
-    
+
     .iconTwo::after {
         content: "\e9b6";
     }
-    
+
     .iconThree::after {
         content: "\e923";
     }
-    
+
     .iconFour::after {
         content: "\e9d9";
     }
-    
-    .detailInformationMudi{
+
+    .detailInformationMudi {
         width: 83%;
         padding: 0px 10px;
         margin: 0;
         text-align: justify;
     }
-    
-    .detailStrongMudi{
-        color: #004797;
+
+    .detailStrongMudi {
+        color: var(--primary-color2);
     }
-    
-    .ARMudiContainer{
+
+    .ARMudiContainer {
         display: none;
     }
-    
-    .containerPrincipalQR{
+
+    .containerPrincipalQR {
         padding: 20px 20px 25px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
     }
-    
-    .codeMudiQR{
+
+    .codeMudiQR {
         border: none;
         outline: none;
         width: 50%;
@@ -527,7 +535,7 @@
 }
 
 @media screen and (min-width:1200px) and (max-width:1499.99px) {
-    .MudiContainerBtns{
+    .MudiContainerBtns {
         display: flex;
         flex-direction: column;
         width: max-content;
@@ -535,42 +543,44 @@
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 1;
-        gap: 10px;
+        z-index: 5;
+        gap: 1em;
     }
-    
-    .btnMudiARAlk , .btnMudi3DAlk{
+
+    .btnMudiARAlk,
+    .btnMudi3DAlk {
         display: flex;
         flex-direction: row;
         width: 180px;
-        background-color: #004797;
+        background-color: var(--primary-color2);
         color: rgb(255, 255, 255);
-        border-radius: 5px;    
+        border-radius: 5px;
         cursor: pointer;
         transition: all ease-in-out .2s;
         box-shadow: -6px 6px 20px #00000036;
     }
-    
-    .btnMudiARAlk:hover , .btnMudi3DAlk:hover{
+
+    .btnMudiARAlk:hover,
+    .btnMudi3DAlk:hover {
         color: white;
         text-decoration: none;
         transform: scale(1.05);
         transition: transform ease-in-out .2s;
     }
-    
-    .circle-btn{
+
+    .circle-btn {
         border-radius: 50px;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: rgb(255, 255, 255);
-        color: #004797;
+        color: var(--primary-color2);
         border: solid white 5px;
         transform: scale(1.1) translateX(-10px);
     }
-    
-    .sect-blue{
+
+    .sect-blue {
         padding: 0;
         margin: 0;
         display: flex;
@@ -578,162 +588,164 @@
         font-weight: 600;
         font-size: 13px;
     }
-    
-    .sect-blue p{
+
+    .sect-blue p {
         padding: 0;
         margin: 0;
     }
-    
-    .alk-icon-ar-view,.alk-icon-3d-view{
+
+    .alk-icon-ar-view,
+    .alk-icon-3d-view {
         margin: 0;
         font-size: 28px;
         padding: 5px;
-        border: #004797 solid 2px;
+        border: var(--primary-color2) solid 2px;
         border-radius: 50px;
     }
+
     /* Estilos del model 3D*/
-    
-    .overlay3DModalMudi{
+
+    .overlay3DModalMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
+        background-color: rgba(0, 0, 0, 0.349);
         z-index: 10000;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudi3D{
+
+    .containerPrincipalMudi3D {
         width: 75%;
         height: 80%;
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
     }
-    
-    .headerModal3D{
+
+    .headerModal3D {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0px 20px;
         height: 10%;
     }
-    
-    .headerModal3DTitle{
+
+    .headerModal3DTitle {
         margin: 0;
         padding: 0;
         font-weight: 200;
         font-size: 18px;
     }
-    
-    .headercontainterButtonOut{
+
+    .headercontainterButtonOut {
         cursor: pointer;
         display: flex;
         align-items: center;
     }
-    
-    .headercontainterButtonOut::after{
+
+    .headercontainterButtonOut::after {
         font-family: alk-icon;
         content: "\e9aa";
-        color: #004797;
-        font-size:32px;
+        color: var(--primary-color2);
+        font-size: 32px;
         height: max-content;
         width: max-content;
     }
-    
-    .separatorMudi{
+
+    .separatorMudi {
         margin: 0;
         padding: 0;
         height: 3px;
-        background-color: #eb5b25;
+        background-color: var(--primary-color1);
         width: 100%;
     }
-    
-    .contentPrincipalModelMudi{
+
+    .contentPrincipalModelMudi {
         width: 100%;
         height: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .modelMudi3DAlk{
+
+    .modelMudi3DAlk {
         width: 100%;
         height: 100%;
         border: none;
         outline: none;
     }
-    
+
     /* estilos del modal AR  */
-    
-    .overlayARMudi{
+
+    .overlayARMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
-        z-index: 10000;
+        background-color: rgba(0, 0, 0, 0.349);
+        z-index:10000;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudiModal{
+
+    .containerPrincipalMudiModal {
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
         width: 75%;
         height: max-content;
     }
-    
-    .headercontainter{
+
+    .headercontainter {
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .headercontainterPrincipalMudiModal{
+
+    .headercontainterPrincipalMudiModal {
         display: flex;
         justify-content: space-between;
         padding: 0px 15px;
         height: max-content;
     }
-    
-    .principalContentMudi{
+
+    .principalContentMudi {
         display: flex;
     }
-    
-    .stepsBystepsMudi{
+
+    .stepsBystepsMudi {
         width: 50%;
         padding: 5px 20px 25px 20px;
         margin: 15px 0px;
         border-right: 1px solid #8080803d;
     }
-    
-    .iconInformationMudi{
+
+    .iconInformationMudi {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    
-    .information{
+
+    .information {
         display: flex;
         justify-content: center;
         gap: 2%;
     }
-    
-    .iconAlkMudi{
+
+    .iconAlkMudi {
         font-family: 'alk-icon';
         font-size: 32px;
-        color: #004797;
+        color: var(--primary-color2);
         width: 15%;
         display: flex;
         justify-content: center;
@@ -741,47 +753,47 @@
         background-color: #f1f1f1;
         border-radius: 5px;
     }
-    
+
     .iconOne::after {
         content: "\e9b0";
     }
-    
+
     .iconTwo::after {
         content: "\e9b6";
     }
-    
+
     .iconThree::after {
         content: "\e923";
     }
-    
+
     .iconFour::after {
         content: "\e9d9";
     }
-    
-    .detailInformationMudi{
+
+    .detailInformationMudi {
         width: 83%;
         padding: 0px 10px;
         margin: 0;
         text-align: justify;
     }
-    
-    .detailStrongMudi{
-        color: #004797;
+
+    .detailStrongMudi {
+        color: var(--primary-color2);
     }
-    
-    .ARMudiContainer{
+
+    .ARMudiContainer {
         display: none;
     }
-    
-    .containerPrincipalQR{
+
+    .containerPrincipalQR {
         padding: 20px 20px 25px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 50%;
     }
-    
-    .codeMudiQR{
+
+    .codeMudiQR {
         border: none;
         outline: none;
         width: 50%;
@@ -791,7 +803,7 @@
 }
 
 @media screen and (min-width:900px) and (max-width:1199.99px) {
-    .MudiContainerBtns{
+    .MudiContainerBtns {
         display: flex;
         flex-direction: column;
         width: max-content;
@@ -799,42 +811,44 @@
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 1;
-        gap: 10px;
+        z-index: 5;
+        gap: 1em;
     }
-    
-    .btnMudiARAlk , .btnMudi3DAlk{
+
+    .btnMudiARAlk,
+    .btnMudi3DAlk {
         display: flex;
         flex-direction: row;
         width: 180px;
-        background-color: #004797;
+        background-color: var(--primary-color2);
         color: rgb(255, 255, 255);
-        border-radius: 5px;    
+        border-radius: 5px;
         cursor: pointer;
         transition: all ease-in-out .2s;
         box-shadow: -6px 6px 20px #00000036;
     }
-    
-    .btnMudiARAlk:hover , .btnMudi3DAlk:hover{
+
+    .btnMudiARAlk:hover,
+    .btnMudi3DAlk:hover {
         color: white;
         text-decoration: none;
         transform: scale(1.05);
         transition: transform ease-in-out .2s;
     }
-    
-    .circle-btn{
+
+    .circle-btn {
         border-radius: 50px;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: rgb(255, 255, 255);
-        color: #004797;
+        color: var(--primary-color2);
         border: solid white 5px;
         transform: scale(1.1) translateX(-10px);
     }
-    
-    .sect-blue{
+
+    .sect-blue {
         padding: 0;
         margin: 0;
         display: flex;
@@ -842,162 +856,164 @@
         font-weight: 600;
         font-size: 13px;
     }
-    
-    .sect-blue p{
+
+    .sect-blue p {
         padding: 0;
         margin: 0;
     }
-    
-    .alk-icon-ar-view,.alk-icon-3d-view{
+
+    .alk-icon-ar-view,
+    .alk-icon-3d-view {
         margin: 0;
         font-size: 28px;
         padding: 5px;
-        border: #004797 solid 2px;
+        border: var(--primary-color2) solid 2px;
         border-radius: 50px;
     }
+
     /* Estilos del model 3D*/
-    
-    .overlay3DModalMudi{
+
+    .overlay3DModalMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
+        background-color: rgba(0, 0, 0, 0.349);
         z-index: 10000;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudi3D{
+
+    .containerPrincipalMudi3D {
         width: 75%;
         height: 80%;
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
     }
-    
-    .headerModal3D{
+
+    .headerModal3D {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0px 20px;
         height: 10%;
     }
-    
-    .headerModal3DTitle{
+
+    .headerModal3DTitle {
         margin: 0;
         padding: 0;
         font-weight: 200;
         font-size: 18px;
     }
-    
-    .headercontainterButtonOut{
+
+    .headercontainterButtonOut {
         cursor: pointer;
         display: flex;
         align-items: center;
     }
-    
-    .headercontainterButtonOut::after{
+
+    .headercontainterButtonOut::after {
         font-family: alk-icon;
         content: "\e9aa";
-        color: #004797;
-        font-size:32px;
+        color: var(--primary-color2);
+        font-size: 32px;
         height: max-content;
         width: max-content;
     }
-    
-    .separatorMudi{
+
+    .separatorMudi {
         margin: 0;
         padding: 0;
         height: 3px;
-        background-color: #eb5b25;
+        background-color: var(--primary-color1);
         width: 100%;
     }
-    
-    .contentPrincipalModelMudi{
+
+    .contentPrincipalModelMudi {
         width: 100%;
         height: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .modelMudi3DAlk{
+
+    .modelMudi3DAlk {
         width: 100%;
         height: 100%;
         border: none;
         outline: none;
     }
-    
+
     /* estilos del modal AR  */
-    
-    .overlayARMudi{
+
+    .overlayARMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
+        background-color: rgba(0, 0, 0, 0.349);
         z-index: 10000;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudiModal{
+
+    .containerPrincipalMudiModal {
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
         width: 40%;
         height: max-content;
     }
-    
-    .headercontainter{
+
+    .headercontainter {
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .headercontainterPrincipalMudiModal{
+
+    .headercontainterPrincipalMudiModal {
         display: flex;
         justify-content: space-between;
         padding: 15px 15px;
         height: max-content;
     }
-    
-    .principalContentMudi{
+
+    .principalContentMudi {
         display: flex;
     }
-    
-    .stepsBystepsMudi{
+
+    .stepsBystepsMudi {
         width: 100%;
         padding: 5px 20px 25px 20px;
         margin: 15px 0px;
         border-right: 1px solid #8080803d;
     }
-    
-    .iconInformationMudi{
+
+    .iconInformationMudi {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    
-    .information{
+
+    .information {
         display: flex;
         justify-content: center;
         gap: 2%;
     }
-    
-    .iconAlkMudi{
+
+    .iconAlkMudi {
         font-family: 'alk-icon';
         font-size: 32px;
-        color: #004797;
+        color: var(--primary-color2);
         width: 15%;
         display: flex;
         justify-content: center;
@@ -1005,35 +1021,35 @@
         background-color: #f1f1f1;
         border-radius: 5px;
     }
-    
+
     .iconOne::after {
         content: "\e9b0";
     }
-    
+
     .iconTwo::after {
         content: "\e9b6";
     }
-    
+
     .iconThree::after {
         content: "\e923";
     }
-    
+
     .iconFour::after {
         content: "\e9d9";
     }
-    
-    .detailInformationMudi{
+
+    .detailInformationMudi {
         width: 83%;
         padding: 0px 10px;
         margin: 0;
         text-align: justify;
     }
-    
-    .detailStrongMudi{
-        color: #004797;
+
+    .detailStrongMudi {
+        color: var(--primary-color2);
     }
-    
-    .ARMudiContainer{
+
+    .ARMudiContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1041,10 +1057,10 @@
         margin-top: 25px;
     }
 
-    .ARMudiContainer a{
+    .ARMudiContainer a {
         width: 95%;
         margin: 0px auto;
-        background-color: #eb5b25;
+        background-color: var(--primary-color1);
         color: rgb(255, 255, 255);
         font-weight: 600;
         font-size: 17px;
@@ -1054,16 +1070,16 @@
         padding: 10px 0px;
         border-radius: 5px;
     }
-    
-    .containerPrincipalQR{
+
+    .containerPrincipalQR {
         display: none;
     }
-    
+
 
 }
 
 @media screen and (min-width:650px) and (max-width:899.99px) {
-    .MudiContainerBtns{
+    .MudiContainerBtns {
         display: flex;
         flex-direction: column;
         width: max-content;
@@ -1071,42 +1087,44 @@
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 1;
-        gap: 10px;
+        z-index: 5;
+        gap: 1em;
     }
-    
-    .btnMudiARAlk , .btnMudi3DAlk{
+
+    .btnMudiARAlk,
+    .btnMudi3DAlk {
         display: flex;
         flex-direction: row;
         width: 180px;
-        background-color: #004797;
+        background-color: var(--primary-color2);
         color: rgb(255, 255, 255);
-        border-radius: 5px;    
+        border-radius: 5px;
         cursor: pointer;
         transition: all ease-in-out .2s;
         box-shadow: -6px 6px 20px #00000036;
     }
-    
-    .btnMudiARAlk:hover , .btnMudi3DAlk:hover{
+
+    .btnMudiARAlk:hover,
+    .btnMudi3DAlk:hover {
         color: white;
         text-decoration: none;
         transform: scale(1.05);
         transition: transform ease-in-out .2s;
     }
-    
-    .circle-btn{
+
+    .circle-btn {
         border-radius: 50px;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: rgb(255, 255, 255);
-        color: #004797;
+        color: var(--primary-color2);
         border: solid white 5px;
         transform: scale(1.1) translateX(-10px);
     }
-    
-    .sect-blue{
+
+    .sect-blue {
         padding: 0;
         margin: 0;
         display: flex;
@@ -1114,162 +1132,164 @@
         font-weight: 600;
         font-size: 13px;
     }
-    
-    .sect-blue p{
+
+    .sect-blue p {
         padding: 0;
         margin: 0;
     }
-    
-    .alk-icon-ar-view,.alk-icon-3d-view{
+
+    .alk-icon-ar-view,
+    .alk-icon-3d-view {
         margin: 0;
         font-size: 28px;
         padding: 5px;
-        border: #004797 solid 2px;
+        border: var(--primary-color2) solid 2px;
         border-radius: 50px;
     }
+
     /* Estilos del model 3D*/
-    
-    .overlay3DModalMudi{
+
+    .overlay3DModalMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
-        z-index: 10000;
+        background-color: rgba(0, 0, 0, 0.349);
+        z-index: 5;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudi3D{
+
+    .containerPrincipalMudi3D {
         width: 75%;
         height: 80%;
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
     }
-    
-    .headerModal3D{
+
+    .headerModal3D {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0px 20px;
         height: 10%;
     }
-    
-    .headerModal3DTitle{
+
+    .headerModal3DTitle {
         margin: 0;
         padding: 0;
         font-weight: 200;
         font-size: 18px;
     }
-    
-    .headercontainterButtonOut{
+
+    .headercontainterButtonOut {
         cursor: pointer;
         display: flex;
         align-items: center;
     }
-    
-    .headercontainterButtonOut::after{
+
+    .headercontainterButtonOut::after {
         font-family: alk-icon;
         content: "\e9aa";
-        color: #004797;
-        font-size:32px;
+        color: var(--primary-color2);
+        font-size: 32px;
         height: max-content;
         width: max-content;
     }
-    
-    .separatorMudi{
+
+    .separatorMudi {
         margin: 0;
         padding: 0;
         height: 3px;
-        background-color: #eb5b25;
+        background-color: var(--primary-color1);
         width: 100%;
     }
-    
-    .contentPrincipalModelMudi{
+
+    .contentPrincipalModelMudi {
         width: 100%;
         height: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .modelMudi3DAlk{
+
+    .modelMudi3DAlk {
         width: 100%;
         height: 100%;
         border: none;
         outline: none;
     }
-    
+
     /* estilos del modal AR  */
-    
-    .overlayARMudi{
+
+    .overlayARMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
-        z-index: 10000;
+        background-color: rgba(0, 0, 0, 0.349);
+        z-index: 5;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudiModal{
+
+    .containerPrincipalMudiModal {
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
         width: 55%;
         height: max-content;
     }
-    
-    .headercontainter{
+
+    .headercontainter {
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .headercontainterPrincipalMudiModal{
+
+    .headercontainterPrincipalMudiModal {
         display: flex;
         justify-content: space-between;
         padding: 15px 15px;
         height: max-content;
     }
-    
-    .principalContentMudi{
+
+    .principalContentMudi {
         display: flex;
     }
-    
-    .stepsBystepsMudi{
+
+    .stepsBystepsMudi {
         width: 100%;
         padding: 5px 20px 25px 20px;
         margin: 15px 0px;
         border-right: 1px solid #8080803d;
     }
-    
-    .iconInformationMudi{
+
+    .iconInformationMudi {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    
-    .information{
+
+    .information {
         display: flex;
         justify-content: center;
         gap: 2%;
     }
-    
-    .iconAlkMudi{
+
+    .iconAlkMudi {
         font-family: 'alk-icon';
         font-size: 32px;
-        color: #004797;
+        color: var(--primary-color2);
         width: 15%;
         display: flex;
         justify-content: center;
@@ -1277,35 +1297,35 @@
         background-color: #f1f1f1;
         border-radius: 5px;
     }
-    
+
     .iconOne::after {
         content: "\e9b0";
     }
-    
+
     .iconTwo::after {
         content: "\e9b6";
     }
-    
+
     .iconThree::after {
         content: "\e923";
     }
-    
+
     .iconFour::after {
         content: "\e9d9";
     }
-    
-    .detailInformationMudi{
+
+    .detailInformationMudi {
         width: 83%;
         padding: 0px 10px;
         margin: 0;
         text-align: justify;
     }
-    
-    .detailStrongMudi{
-        color: #004797;
+
+    .detailStrongMudi {
+        color: var(--primary-color2);
     }
-    
-    .ARMudiContainer{
+
+    .ARMudiContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1313,10 +1333,10 @@
         margin-top: 25px;
     }
 
-    .ARMudiContainer a{
+    .ARMudiContainer a {
         width: 95%;
         margin: 0px auto;
-        background-color: #eb5b25;
+        background-color: var(--primary-color1);
         color: rgb(255, 255, 255);
         font-weight: 600;
         font-size: 17px;
@@ -1326,16 +1346,16 @@
         padding: 10px 0px;
         border-radius: 5px;
     }
-    
-    .containerPrincipalQR{
+
+    .containerPrincipalQR {
         display: none;
     }
-    
+
 
 }
 
 @media screen and (max-width:650px) {
-    .MudiContainerBtns{
+    .MudiContainerBtns {
         display: flex;
         flex-direction: row;
         width: max-content;
@@ -1343,17 +1363,18 @@
         position: inherit;
         top: 0;
         right: 0;
-        z-index: 10;
+        z-index: 5;
         gap: 10px;
     }
-    
-    .btnMudiARAlk , .btnMudi3DAlk{
+
+    .btnMudiARAlk,
+    .btnMudi3DAlk {
         display: flex;
         flex-direction: row;
         width: 180px;
-        background-color: #004797;
+        background-color: var(--primary-color2);
         color: rgb(255, 255, 255);
-        border-radius: 5px;    
+        border-radius: 5px;
         cursor: pointer;
         transition: all ease-in-out .2s;
         box-shadow: -6px 6px 20px #00000036;
@@ -1361,27 +1382,28 @@
         z-index: 10;
         margin: 15px 0px;
     }
-    
-    .btnMudiARAlk:hover , .btnMudi3DAlk:hover{
+
+    .btnMudiARAlk:hover,
+    .btnMudi3DAlk:hover {
         color: white;
         text-decoration: none;
         transform: scale(1.05);
         transition: transform ease-in-out .2s;
     }
-    
-    .circle-btn{
+
+    .circle-btn {
         border-radius: 50px;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: rgb(255, 255, 255);
-        color: #004797;
+        color: var(--primary-color2);
         border: solid white 5px;
         transform: scale(1.1) translateX(-10px);
     }
-    
-    .sect-blue{
+
+    .sect-blue {
         padding: 0;
         margin: 0;
         display: flex;
@@ -1389,162 +1411,164 @@
         font-weight: 600;
         font-size: 13px;
     }
-    
-    .sect-blue p{
+
+    .sect-blue p {
         padding: 0;
         margin: 0;
     }
-    
-    .alk-icon-ar-view,.alk-icon-3d-view{
+
+    .alk-icon-ar-view,
+    .alk-icon-3d-view {
         margin: 0;
         font-size: 28px;
         padding: 5px;
-        border: #004797 solid 2px;
+        border: var(--primary-color2) solid 2px;
         border-radius: 50px;
     }
+
     /* Estilos del model 3D*/
-    
-    .overlay3DModalMudi{
+
+    .overlay3DModalMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
-        z-index: 10000;
+        background-color: rgba(0, 0, 0, 0.349);
+        z-index: 5;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudi3D{
+
+    .containerPrincipalMudi3D {
         width: 100%;
         height: 80%;
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
     }
-    
-    .headerModal3D{
+
+    .headerModal3D {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0px 20px;
         height: 10%;
     }
-    
-    .headerModal3DTitle{
+
+    .headerModal3DTitle {
         margin: 0;
         padding: 0;
         font-weight: 200;
         font-size: 18px;
     }
-    
-    .headercontainterButtonOut{
+
+    .headercontainterButtonOut {
         cursor: pointer;
         display: flex;
         align-items: center;
     }
-    
-    .headercontainterButtonOut::after{
+
+    .headercontainterButtonOut::after {
         font-family: alk-icon;
         content: "\e9aa";
-        color: #004797;
-        font-size:32px;
+        color: var(--primary-color2);
+        font-size: 32px;
         height: max-content;
         width: max-content;
     }
-    
-    .separatorMudi{
+
+    .separatorMudi {
         margin: 0;
         padding: 0;
         height: 3px;
-        background-color: #eb5b25;
+        background-color: var(--primary-color1);
         width: 100%;
     }
-    
-    .contentPrincipalModelMudi{
+
+    .contentPrincipalModelMudi {
         width: 100%;
         height: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .modelMudi3DAlk{
+
+    .modelMudi3DAlk {
         width: 100%;
         height: 100%;
         border: none;
         outline: none;
     }
-    
+
     /* estilos del modal AR  */
-    
-    .overlayARMudi{
+
+    .overlayARMudi {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.349) ;
-        z-index: 10000;
+        background-color: rgba(0, 0, 0, 0.349);
+        z-index: 5;
         display: flex;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
     }
-    
-    .containerPrincipalMudiModal{
+
+    .containerPrincipalMudiModal {
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
         width: 100%;
         height: max-content;
     }
-    
-    .headercontainter{
+
+    .headercontainter {
         margin: 0;
         padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .headercontainterPrincipalMudiModal{
+
+    .headercontainterPrincipalMudiModal {
         display: flex;
         justify-content: space-between;
         padding: 15px 15px;
         height: max-content;
     }
-    
-    .principalContentMudi{
+
+    .principalContentMudi {
         display: flex;
     }
-    
-    .stepsBystepsMudi{
+
+    .stepsBystepsMudi {
         width: 100%;
         padding: 5px 20px 25px 20px;
         margin: 15px 0px;
         border-right: 1px solid #8080803d;
     }
-    
-    .iconInformationMudi{
+
+    .iconInformationMudi {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    
-    .information{
+
+    .information {
         display: flex;
         justify-content: center;
         gap: 2%;
     }
-    
-    .iconAlkMudi{
+
+    .iconAlkMudi {
         font-family: 'alk-icon';
         font-size: 32px;
-        color: #004797;
+        color: var(--primary-color2);
         width: 15%;
         display: flex;
         justify-content: center;
@@ -1552,35 +1576,35 @@
         background-color: #f1f1f1;
         border-radius: 5px;
     }
-    
+
     .iconOne::after {
         content: "\e9b0";
     }
-    
+
     .iconTwo::after {
         content: "\e9b6";
     }
-    
+
     .iconThree::after {
         content: "\e923";
     }
-    
+
     .iconFour::after {
         content: "\e9d9";
     }
-    
-    .detailInformationMudi{
+
+    .detailInformationMudi {
         width: 83%;
         padding: 0px 10px;
         margin: 0;
         text-align: justify;
     }
-    
-    .detailStrongMudi{
-        color: #004797;
+
+    .detailStrongMudi {
+        color: var(--primary-color2);
     }
-    
-    .ARMudiContainer{
+
+    .ARMudiContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1588,10 +1612,10 @@
         margin-top: 25px;
     }
 
-    .ARMudiContainer a{
+    .ARMudiContainer a {
         width: 95%;
         margin: 0px auto;
-        background-color: #eb5b25;
+        background-color: var(--primary-color1);
         color: rgb(255, 255, 255);
         font-weight: 600;
         font-size: 17px;
@@ -1601,8 +1625,8 @@
         padding: 10px 0px;
         border-radius: 5px;
     }
-    
-    .containerPrincipalQR{
+
+    .containerPrincipalQR {
         display: none;
     }
 }
