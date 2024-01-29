@@ -261,7 +261,7 @@ function eventsDataLayer(company){
 const MudiExperience = async(companyName) => {
   const responseServer = await serverData({token:'BxC9UYtJENQgD5RjDt2A',sku:skuNumber});
   if(!responseServer) return console.warn(`El producto identificado con SKU: "%c${skuNumber}%c" en la base de datos de Mudi, no existe.\n Revise bien los parámetros de construcción; Si está seguro de que el producto cuenta con la tecnología comuníquese con el equipo técnico de Mudi 3D&AR Commerce\n Gracias!`, 'color: red; font-weight: bold;', 'color: initial;');
-  else{ createStyles(); createBtns(responseServer.URL_WEB, responseServer.URL_AR,responseServer.URL_QR); eventsDataLayer(companyName) };
+  else{ createStyles(companyName); createBtns(responseServer.URL_WEB, responseServer.URL_AR,responseServer.URL_QR); eventsDataLayer(companyName) };
 
 };
 
