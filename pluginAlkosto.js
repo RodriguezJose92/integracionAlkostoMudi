@@ -161,9 +161,12 @@ function createModal3D(url3D){
   </div>
   `;
 
+  document.body.setAttribute('mudiBlock','block');
+
   div.querySelector('.headercontainterButtonOut').addEventListener('click',()=>{
-    document.querySelector('#overlayModalMudi3D').remove()
-  })
+    document.querySelector('#overlayModalMudi3D').remove();
+    document.body.setAttribute('mudiBlock','blank');
+  });
 
   document.body.appendChild(div);
   

@@ -1,4 +1,7 @@
 /* codigo integración Mudi */
+[mudiBlock='block'] {
+    overflow: hidden !important;
+}
 
 @media screen and (min-width:1700px) {
     .MudiContainerBtns {
@@ -244,7 +247,7 @@
         text-align: justify;
     }
 
- .detailStrongMudi {
+    .detailStrongMudi {
         color: var(--link-text-color);
     }
 
@@ -513,7 +516,7 @@
         text-align: justify;
     }
 
- .detailStrongMudi {
+    .detailStrongMudi {
         color: var(--link-text-color);
     }
 
@@ -694,7 +697,7 @@
         width: 100%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.349);
-        z-index:10000;
+        z-index: 10000;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -782,7 +785,7 @@
         text-align: justify;
     }
 
- .detailStrongMudi {
+    .detailStrongMudi {
         color: var(--link-text-color);
     }
 
@@ -1051,7 +1054,7 @@
         text-align: justify;
     }
 
- .detailStrongMudi {
+    .detailStrongMudi {
         color: var(--link-text-color);
     }
 
@@ -1108,6 +1111,7 @@
         cursor: pointer;
         transition: all ease-in-out .2s;
         box-shadow: -6px 6px 20px #00000036;
+        transform: scale(.8);
     }
 
     .btnMudiARAlk:hover,
@@ -1328,7 +1332,7 @@
         text-align: justify;
     }
 
- .detailStrongMudi {
+    .detailStrongMudi {
         color: var(--link-text-color);
     }
 
@@ -1608,7 +1612,7 @@
         text-align: justify;
     }
 
- .detailStrongMudi {
+    .detailStrongMudi {
         color: var(--link-text-color);
     }
 
