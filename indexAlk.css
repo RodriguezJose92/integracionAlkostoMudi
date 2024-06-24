@@ -213,7 +213,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--link-text-color);
         width: 15%;
@@ -482,7 +482,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--link-text-color);
         width: 15%;
@@ -751,7 +751,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--link-text-color);
         width: 15%;
@@ -1020,7 +1020,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--link-text-color);
         width: 15%;
@@ -1298,7 +1298,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--link-text-color);
         width: 15%;
@@ -1365,7 +1365,7 @@
 
 }
 
-@media screen and (max-width:650px) {
+@media screen and (min-width:400px) and (max-width:650px) {
     .MudiContainerBtns {
         display: flex;
         flex-direction: row;
@@ -1373,9 +1373,10 @@
         height: max-content;
         position: inherit;
         top: 0;
-        right: 0;
+        right: 25;
         z-index: 5;
         gap: 10px;
+        transform: scale(.85)
     }
 
     .btnMudiARAlk,
@@ -1447,7 +1448,7 @@
         width: 100%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.349);
-        z-index: 5;
+        z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1524,7 +1525,7 @@
         width: 100%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.349);
-        z-index: 5;
+        z-index: 10;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1578,7 +1579,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--link-text-color);
         width: 15%;
