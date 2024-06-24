@@ -1365,7 +1365,7 @@
 
 }
 
-@media screen and (min-width:400px) and (max-width:650px) {
+@media screen and (max-width:650px) {
     .MudiContainerBtns {
         display: flex;
         flex-direction: row;
