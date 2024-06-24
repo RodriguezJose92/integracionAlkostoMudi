@@ -215,7 +215,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--primary-color2);
         width: 15%;
@@ -483,7 +483,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--primary-color2);
         width: 15%;
@@ -751,7 +751,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--primary-color2);
         width: 15%;
@@ -1019,7 +1019,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--primary-color2);
         width: 15%;
@@ -1295,7 +1295,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--primary-color2);
         width: 15%;
@@ -1370,9 +1370,10 @@
         height: max-content;
         position: inherit;
         top: 0;
-        right: 0;
+        right: 20px;
         z-index: 5;
         gap: 0px;
+        transform: scale(.9)
     }
 
     .btnMudiARAlk,
@@ -1574,7 +1575,7 @@
     }
 
     .iconAlkMudi {
-        font-family: 'alk-icon';
+        font-family: 'alk-icon' !important;
         font-size: 32px;
         color: var(--primary-color2);
         width: 15%;
