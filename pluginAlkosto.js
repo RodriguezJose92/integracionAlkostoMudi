@@ -1,19 +1,14 @@
 /** Codigo integración Mudi */
 
-/** Tomamos el valor del SKU de la PDP */
-let skuNumber = document.querySelector('.js-ean-pdp').innerHTML;
-
 /** Se hace la petición al servidor Mudi */
 async function serverData ({
     token = undefined,
     sku = undefined
   }) {
   
-    // Errores
     if (token == null) { console.error('Error Mudi: Token Api Null') ;  return }
-    if ( sku == null)  { console.error('Error Mudi: SKU Null') ;  return}
+    if ( sku == null)  { console.error('Error Mudi: SKU Null') ;  return }
   
-    // Respuesta positiva 
     let contentBody = { "skus": [`${sku}_ALK`] }
   
     const req = await fetch ('https://mudiview.mudi.com.co:7443/product/getProductsUrl' , {
@@ -29,33 +24,28 @@ async function serverData ({
     const finalResponse = jsonResponse.data[0];
   
     return finalResponse;
-  
 };
 
 /** Si la respuesta es positiva se crean los botones */
-function createBtns (url3D , urlAR , urlQR){
+function createBtns (url3D , urlAR , urlQR, skuNumber){
   const div = document.createElement('DIV');
   div.classList.add('MudiContainerBtns');
   div.id = 'containerMudiBtns';
 
   div.innerHTML=`
   <a type="button" id="mudiBtnAr" class="btnMudiARAlk">
-       
     <div class="circle-btn">
       <span class="alk-icon-ar-view"></span>
     </div>
-
    <div class="sect-blue">
     <p>Ver producto en mi espacio<span class="alk-icon-derecha"></span></p>
    </div>
-
   </a>
   
   <a type="button" id="mudiBtn3D" class="btnMudi3DAlk">
     <div class="circle-btn">
        <span class="alk-icon-3d-view"></span>
     </div>
-
     <div class="sect-blue">
       <p>Activar interacción en 3D<span class="alk-icon-derecha"></span></p>
     </div>
@@ -67,7 +57,6 @@ function createBtns (url3D , urlAR , urlQR){
   // Polling para esperar a que el nuevo contenedor de la galería exista
   let intentos = 0;
   const buscarContenedor = setInterval(() => {
-    // AQUÍ ESTÁ EL CAMBIO A LA NUEVA CLASE
     const contenedorGaleria = document.querySelector('.new-container__main-product__pdp-gallery-wrapper');
     
     if (contenedorGaleria) {
@@ -78,7 +67,7 @@ function createBtns (url3D , urlAR , urlQR){
     intentos++;
     if (intentos > 20) { 
       clearInterval(buscarContenedor);
-      console.warn('Mudi: No se encontró el contenedor de la galería (.new-container__main-product__pdp-gallery-wrapper) después de varios intentos.');
+      console.warn('Mudi: NosetPrototypeOf se encontró el contenedor de la galería (.new-container__main-product__pdp-gallery-wrapper)');
     }
   }, 500);
 };
@@ -89,63 +78,42 @@ function createModalAR(urlAR,urlQR){
   div.classList.add('overlayARMudi');
   div.innerHTML=`
   <div class="containerPrincipalMudiModal">
-
     <div class="headercontainterPrincipalMudiModal">
       <h3 class="headercontainter title"> Ver el producto en realidad aumentada </h3>
       <div class="headercontainterButtonOut"></div>
     </div>
     <hr class="separatorMudi"></hr>
-
     <section class="principalContentMudi">
-
       <div class="stepsBystepsMudi">
         <p>Sigue estos sencillos pasos para ver el producto en realidad aumentada:</p>
-
         <div class="iconInformationMudi">
-
           <div class="information">
             <div class="iconAlkMudi iconOne"></div>
-            <p class="detailInformationMudi">
-              <b class="detailStrongMudi">Ubica tu teléfono:</b> apunta tu teléfono al piso o a una superficie plana para ver el producto.
-            </p>
+            <p class="detailInformationMudi"><b class="detailStrongMudi">Ubica tu teléfono:</b> apunta tu teléfono al piso o a una superficie plana para ver el producto.</p>
           </div>
           <div class="information">
             <div class="iconAlkMudi iconTwo"></div>
-            <p class="detailInformationMudi">
-              <b class="detailStrongMudi">Interactúa para visualizar:</b> desplaza tu dedo en la pantalla para rotar y acomodar la imagen.
-            </p>
+            <p class="detailInformationMudi"><b class="detailStrongMudi">Interactúa para visualizar:</b> desplaza tu dedo en la pantalla para rotar y acomodar la imagen.</p>
           </div>
           <div class="information">
             <div class="iconAlkMudi iconThree"></div>
-            <p class="detailInformationMudi">
-              <b class="detailStrongMudi">Detalla el producto:</b> aumenta la imagen y controla el zoom arrastrando dos dedos en la pantalla de adentro hacia afuera.
-            </p>
+            <p class="detailInformationMudi"><b class="detailStrongMudi">Detalla el producto:</b> aumenta la imagen y controla el zoom arrastrando dos dedos en la pantalla de adentro hacia afuera.</p>
           </div>
           <div class="information">
             <div class="iconAlkMudi iconFour"></div>
-            <p class="detailInformationMudi">
-              <b class="detailStrongMudi">Reestablece la imagen:</b> presiona dos veces la pantalla de tu teléfono sobre el producto para volver al tamaño original.
-            </p>
+            <p class="detailInformationMudi"><b class="detailStrongMudi">Reestablece la imagen:</b> presiona dos veces la pantalla de tu teléfono sobre el producto para volver al tamaño original.</p>
           </div>
-
           <div class="ARMudiContainer">
             <p class="ARMudiContainerText"> Haz clic en el siguiente botón para vivir la experiencia</p>
-            <a href="${urlAR
-            }" target="_BLANK" class="ARMUDIContainerInnit">Empezar</a>
+            <a href="${urlAR}" target="_BLANK" class="ARMUDIContainerInnit">Empezar</a>
           </div>
-
         </div>
-
       </div>
-
-
       <div class="containerPrincipalQR">
         <p>Escanea el siguiente <b class="detailStrongMudi" >código QR</b> para ver el producto en realidad aumentada.</p>
         <img src="${urlQR}" class="codeMudiQR"></img>
       </div>
-
     </section>
-
   </div>
   `;
 
@@ -166,17 +134,14 @@ function createModal3D(url3D){
   div.id="overlayModalMudi3D";
   div.innerHTML=`
   <div class="containerPrincipalMudi3D">
-
     <div class="headerModal3D">
       <h3 class="headerModal3DTitle">Ver el producto en 3D</h3>
       <div class="headercontainterButtonOut"></div>
     </div>
     <hr class="separatorMudi"></hr>
-
     <section class="contentPrincipalModelMudi">
       <iframe src="${url3D}" class="modelMudi3DAlk"></iframe>
     </section>
-
   </div>
   `;
 
@@ -188,12 +153,10 @@ function createModal3D(url3D){
   });
 
   document.body.appendChild(div);
-  
 }
 
 /** Se crean los estilos para los elementos*/
 function createStyles(companyName){
-
     let urlStyles ;
     switch(companyName){
       case 'Alkosto':
@@ -219,8 +182,7 @@ function createStyles(companyName){
 };
 
 /** Envío de Data por medio del dataLayer */
-function eventsDataLayer(company){
-
+function eventsDataLayer(company, skuNumber){
   let OSdevice;
 
   if(navigator.userAgent.includes('Android')) OSdevice='Android';
@@ -238,7 +200,6 @@ function eventsDataLayer(company){
       'retail':company
   });
 
-  /** Envío de click para medir intención de compra */
   const addToCartBtn = document.getElementById('addToCartButton');
   if (addToCartBtn) {
     addToCartBtn.addEventListener('click',()=>{
@@ -254,7 +215,6 @@ function eventsDataLayer(company){
     },false);
   }
 
-  /** Envío de interacción AR Desk */
   const btnAr = document.querySelector('#mudiBtnAr');
   if (btnAr) {
     btnAr.addEventListener('click',()=>{
@@ -271,7 +231,6 @@ function eventsDataLayer(company){
     },false);
   }
 
-  /** Envío de interacción 3D Desk */
   const btn3D = document.querySelector('#mudiBtn3D');
   if(btn3D) {
     btn3D.addEventListener('click',()=>{
@@ -290,8 +249,39 @@ function eventsDataLayer(company){
 };
 
 // function Main
-const MudiExperience = async(companyName) => {
-  const responseServer = await serverData({token:'BxC9UYtJENQgD5RjDt2A',sku:skuNumber});
-  if(!responseServer) return console.warn(`El producto identificado con SKU: "%c${skuNumber}%c" en la base de datos de Mudi, no existe.\n Revise bien los parámetros de construcción; Si está seguro de que el producto cuenta con la tecnología comuníquese con el equipo técnico de Mudi 3D&AR Commerce\n Gracias!`, 'color: red; font-weight: bold;', 'color: initial;');
-  else{ createStyles(companyName); createBtns(responseServer.URL_WEB, responseServer.URL_AR,responseServer.URL_QR); eventsDataLayer(companyName) };
+const MudiExperience = async(companyName, skuNumber) => {
+  const responseServer = await serverData({token:'BxC9UYtJENQgD5RjDt2A', sku:skuNumber});
+  
+  if(!responseServer) {
+      return console.warn(`El producto identificado con SKU: "%c${skuNumber}%c" en la base de datos de Mudi, no existe.\n Revise bien los parámetros de construcción; Si está seguro de que el producto cuenta con la tecnología comuníquese con el equipo técnico de Mudi 3D&AR Commerce\n Gracias!`, 'color: red; font-weight: bold;', 'color: initial;');
+  } else { 
+      createStyles(companyName); 
+      createBtns(responseServer.URL_WEB, responseServer.URL_AR, responseServer.URL_QR, skuNumber); 
+      eventsDataLayer(companyName, skuNumber);
+  };
 };
+
+// INICIALIZADOR: Espera a que el SKU exista antes de ejecutar todo
+function initMudi() {
+    let intentos = 0;
+    
+    const buscarSKU = setInterval(() => {
+        const skuElement = document.querySelector('.js-ean-pdp');
+        
+        if (skuElement && skuElement.innerHTML.trim() !== '') {
+            clearInterval(buscarSKU); 
+            let skuNumber = skuElement.innerHTML.trim();
+            console.log("Mudi: SKU detectado ->", skuNumber);
+            MudiExperience('Alkosto', skuNumber); 
+        }
+        
+        intentos++;
+        if (intentos > 20) {
+            clearInterval(buscarSKU);
+            console.warn("Mudi: Nunca se encontró el elemento '.js-ean-pdp'");
+        }
+    }, 500); 
+}
+
+// Arrancar el proceso
+initMudi();
