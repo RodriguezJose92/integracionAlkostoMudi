@@ -4,19 +4,19 @@
     overflow: hidden !important;
 }
 
-
-
 @media screen and (min-width:1700px) {
     .MudiContainerBtns {
         display: flex;
-        flex-direction: column;
-        width: max-content;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
         height: max-content;
-        position: absolute;
-        top: 0;
-        right: 0;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
         z-index: 5;
-        gap: 1em;
+        gap: 15px;
     }
 
     .btnMudiARAlk,
@@ -277,14 +277,16 @@
 @media screen and (min-width:1500px) and (max-width:1699.99px) {
     .MudiContainerBtns {
         display: flex;
-        flex-direction: column;
-        width: max-content;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
         height: max-content;
-        position: absolute;
-        top: 0;
-        right: 0;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
         z-index: 5;
-        gap: 1em;
+        gap: 15px;
     }
 
     .btnMudiARAlk,
@@ -545,14 +547,16 @@
 @media screen and (min-width:1200px) and (max-width:1499.99px) {
     .MudiContainerBtns {
         display: flex;
-        flex-direction: column;
-        width: max-content;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
         height: max-content;
-        position: absolute;
-        top: 0;
-        right: 0;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
         z-index: 5;
-        gap: 1em;
+        gap: 15px;
     }
 
     .btnMudiARAlk,
@@ -813,14 +817,16 @@
 @media screen and (min-width:900px) and (max-width:1199.99px) {
     .MudiContainerBtns {
         display: flex;
-        flex-direction: column;
-        width: max-content;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
         height: max-content;
-        position: absolute;
-        top: 0;
-        right: 0;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
         z-index: 5;
-        gap: 1em;
+        gap: 15px;
     }
 
     .btnMudiARAlk,
@@ -1082,21 +1088,21 @@
     .containerPrincipalQR {
         display: none;
     }
-
-
 }
 
 @media screen and (min-width:650px) and (max-width:899.99px) {
     .MudiContainerBtns {
         display: flex;
-        flex-direction: column;
-        width: max-content;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
         height: max-content;
-        position: absolute;
-        top: 0;
-        right: 0;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
         z-index: 5;
-        gap: 1em;
+        gap: 15px;
     }
 
     .btnMudiARAlk,
@@ -1358,22 +1364,21 @@
     .containerPrincipalQR {
         display: none;
     }
-
-
 }
 
 @media screen and (max-width:650px) {
     .MudiContainerBtns {
         display: flex;
         flex-direction: row;
-        width: max-content;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
         height: max-content;
-        position: inherit;
-        top: 0;
-        right: 20px;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
         z-index: 5;
-        gap: 0px;
-        transform: scale(.9)
+        gap: 10px;
     }
 
     .btnMudiARAlk,
@@ -1387,7 +1392,7 @@
         cursor: pointer;
         transition: all ease-in-out .2s;
         box-shadow: -6px 6px 20px #00000036;
-        transform: scale(.8);
+        transform: scale(.9);
         z-index: 10;
         margin: 15px 0px;
     }
