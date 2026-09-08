@@ -15,8 +15,9 @@
         position: relative;
         margin-top: 20px;
         margin-bottom: 20px;
+        margin-left: 45px;
         z-index: 5;
-        gap: 15px;
+        gap: 60px;
     }
 
     .btnMudiARAlk,
@@ -75,8 +76,6 @@
         color: var(--link-text-color);
         border-radius: 50px;
     }
-
-    /* Estilos del model 3D*/
 
     .overlay3DModalMudi {
         position: fixed;
@@ -152,8 +151,6 @@
         border: none;
         outline: none;
     }
-
-    /* estilos del modal AR  */
 
     .overlayARMudi {
         position: fixed;
@@ -227,21 +224,10 @@
         border-radius: 5px;
     }
 
-    .iconOne::after {
-        content: "\e9b0";
-    }
-
-    .iconTwo::after {
-        content: "\e9b6";
-    }
-
-    .iconThree::after {
-        content: "\e923";
-    }
-
-    .iconFour::after {
-        content: "\e9d9";
-    }
+    .iconOne::after { content: "\e9b0"; }
+    .iconTwo::after { content: "\e9b6"; }
+    .iconThree::after { content: "\e923"; }
+    .iconFour::after { content: "\e9d9"; }
 
     .detailInformationMudi {
         width: 83%;
@@ -286,8 +272,9 @@
         position: relative;
         margin-top: 20px;
         margin-bottom: 20px;
+        margin-left: 45px;
         z-index: 5;
-        gap: 15px;
+        gap: 60px;
     }
 
     .btnMudiARAlk,
@@ -346,8 +333,6 @@
         color: var(--link-text-color);
         border-radius: 50px;
     }
-
-    /* Estilos del model 3D*/
 
     .overlay3DModalMudi {
         position: fixed;
@@ -423,8 +408,6 @@
         border: none;
         outline: none;
     }
-
-    /* estilos del modal AR  */
 
     .overlayARMudi {
         position: fixed;
@@ -498,21 +481,10 @@
         border-radius: 5px;
     }
 
-    .iconOne::after {
-        content: "\e9b0";
-    }
-
-    .iconTwo::after {
-        content: "\e9b6";
-    }
-
-    .iconThree::after {
-        content: "\e923";
-    }
-
-    .iconFour::after {
-        content: "\e9d9";
-    }
+    .iconOne::after { content: "\e9b0"; }
+    .iconTwo::after { content: "\e9b6"; }
+    .iconThree::after { content: "\e923"; }
+    .iconFour::after { content: "\e9d9"; }
 
     .detailInformationMudi {
         width: 83%;
@@ -557,8 +529,9 @@
         position: relative;
         margin-top: 20px;
         margin-bottom: 20px;
+        margin-left: 45px;
         z-index: 5;
-        gap: 15px;
+        gap: 60px;
     }
 
     .btnMudiARAlk,
@@ -617,8 +590,6 @@
         color: var(--link-text-color);
         border-radius: 50px;
     }
-
-    /* Estilos del model 3D*/
 
     .overlay3DModalMudi {
         position: fixed;
@@ -694,8 +665,6 @@
         border: none;
         outline: none;
     }
-
-    /* estilos del modal AR  */
 
     .overlayARMudi {
         position: fixed;
@@ -769,21 +738,10 @@
         border-radius: 5px;
     }
 
-    .iconOne::after {
-        content: "\e9b0";
-    }
-
-    .iconTwo::after {
-        content: "\e9b6";
-    }
-
-    .iconThree::after {
-        content: "\e923";
-    }
-
-    .iconFour::after {
-        content: "\e9d9";
-    }
+    .iconOne::after { content: "\e9b0"; }
+    .iconTwo::after { content: "\e9b6"; }
+    .iconThree::after { content: "\e923"; }
+    .iconFour::after { content: "\e9d9"; }
 
     .detailInformationMudi {
         width: 83%;
@@ -828,8 +786,9 @@
         position: relative;
         margin-top: 20px;
         margin-bottom: 20px;
+        margin-left: 45px;
         z-index: 5;
-        gap: 15px;
+        gap: 60px;
     }
 
     .btnMudiARAlk,
@@ -888,8 +847,6 @@
         color: var(--link-text-color);
         border-radius: 50px;
     }
-
-    /* Estilos del model 3D*/
 
     .overlay3DModalMudi {
         position: fixed;
@@ -965,8 +922,6 @@
         border: none;
         outline: none;
     }
-
-    /* estilos del modal AR  */
 
     .overlayARMudi {
         position: fixed;
@@ -1040,21 +995,10 @@
         border-radius: 5px;
     }
 
-    .iconOne::after {
-        content: "\e9b0";
-    }
-
-    .iconTwo::after {
-        content: "\e9b6";
-    }
-
-    .iconThree::after {
-        content: "\e923";
-    }
-
-    .iconFour::after {
-        content: "\e9d9";
-    }
+    .iconOne::after { content: "\e9b0"; }
+    .iconTwo::after { content: "\e9b6"; }
+    .iconThree::after { content: "\e923"; }
+    .iconFour::after { content: "\e9d9"; }
 
     .detailInformationMudi {
         width: 83%;
@@ -1105,8 +1049,9 @@
         position: relative;
         margin-top: 20px;
         margin-bottom: 20px;
+        margin-left: 45px;
         z-index: 5;
-        gap: 15px;
+        gap: 60px;
     }
 
     .btnMudiARAlk,
@@ -1166,8 +1111,6 @@
         color: var(--link-text-color);
         border-radius: 50px;
     }
-
-    /* Estilos del model 3D*/
 
     .overlay3DModalMudi {
         position: fixed;
@@ -1244,8 +1187,6 @@
         outline: none;
     }
 
-    /* estilos del modal AR  */
-
     .overlayARMudi {
         position: fixed;
         top: 0;
@@ -1318,21 +1259,10 @@
         border-radius: 5px;
     }
 
-    .iconOne::after {
-        content: "\e9b0";
-    }
-
-    .iconTwo::after {
-        content: "\e9b6";
-    }
-
-    .iconThree::after {
-        content: "\e923";
-    }
-
-    .iconFour::after {
-        content: "\e9d9";
-    }
+    .iconOne::after { content: "\e9b0"; }
+    .iconTwo::after { content: "\e9b6"; }
+    .iconThree::after { content: "\e923"; }
+    .iconFour::after { content: "\e9d9"; }
 
     .detailInformationMudi {
         width: 83%;
@@ -1383,8 +1313,9 @@
         position: relative;
         margin-top: 20px;
         margin-bottom: 20px;
+        margin-left: 0;
         z-index: 5;
-        gap: 10px;
+        gap: 20px;
     }
 
     .btnMudiARAlk,
@@ -1446,8 +1377,6 @@
         color: var(--link-text-color);
         border-radius: 50px;
     }
-
-    /* Estilos del model 3D*/
 
     .overlay3DModalMudi {
         position: fixed;
@@ -1524,8 +1453,6 @@
         outline: none;
     }
 
-    /* estilos del modal AR  */
-
     .overlayARMudi {
         position: fixed;
         top: 0;
@@ -1598,21 +1525,10 @@
         border-radius: 5px;
     }
 
-    .iconOne::after {
-        content: "\e9b0";
-    }
-
-    .iconTwo::after {
-        content: "\e9b6";
-    }
-
-    .iconThree::after {
-        content: "\e923";
-    }
-
-    .iconFour::after {
-        content: "\e9d9";
-    }
+    .iconOne::after { content: "\e9b0"; }
+    .iconTwo::after { content: "\e9b6"; }
+    .iconThree::after { content: "\e923"; }
+    .iconFour::after { content: "\e9d9"; }
 
     .detailInformationMudi {
         width: 83%;
