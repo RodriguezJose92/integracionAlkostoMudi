@@ -64,7 +64,23 @@ function createBtns (url3D , urlAR , urlQR){
   div.querySelector('#mudiBtn3D').addEventListener('click',()=>createModal3D(url3D));
   div.querySelector('#mudiBtnAr').addEventListener('click',()=>createModalAR(urlAR,urlQR));
   
-  document.querySelector('.container_new-gallery').appendChild(div);
+  // Polling para esperar a que el nuevo contenedor de la galería exista
+  let intentos = 0;
+  const buscarContenedor = setInterval(() => {
+    // AQUÍ ESTÁ EL CAMBIO A LA NUEVA CLASE
+    const contenedorGaleria = document.querySelector('.new-container__main-product__pdp-gallery-wrapper');
+    
+    if (contenedorGaleria) {
+      contenedorGaleria.appendChild(div);
+      clearInterval(buscarContenedor); 
+    }
+    
+    intentos++;
+    if (intentos > 20) { 
+      clearInterval(buscarContenedor);
+      console.warn('Mudi: No se encontró el contenedor de la galería (.new-container__main-product__pdp-gallery-wrapper) después de varios intentos.');
+    }
+  }, 500);
 };
 
 /** Creación del ModalAR */
@@ -143,7 +159,7 @@ function createModalAR(urlAR,urlQR){
   document.body.appendChild(div);
 };
 
-/** Crreación del Modal3D */
+/** Creación del Modal3D */
 function createModal3D(url3D){
   const div = document.createElement('DIV');
   div.classList.add('overlay3DModalMudi');
@@ -223,46 +239,54 @@ function eventsDataLayer(company){
   });
 
   /** Envío de click para medir intención de compra */
-  document.getElementById('addToCartButton').addEventListener('click',()=>{
-      dataLayer.push({
-          'event':'Intención de compra Mudi',
-          'valorMudi':1,
-          'sku':skuNumber,
-          'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
-          'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
-          'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
-          'retail':company
-      });
-  },false);
+  const addToCartBtn = document.getElementById('addToCartButton');
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener('click',()=>{
+        dataLayer.push({
+            'event':'Intención de compra Mudi',
+            'valorMudi':1,
+            'sku':skuNumber,
+            'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
+            'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
+            'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
+            'retail':company
+        });
+    },false);
+  }
 
   /** Envío de interacción AR Desk */
-  document.querySelector('#mudiBtnAr').addEventListener('click',()=>{
-      dataLayer.push({
-          'event':'click BTN AR Mudi',
-          'dispositivo':OSdevice,
-          'valorMudi':1,
-          'sku':skuNumber,
-          'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
-          'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
-          'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
-          'retail':company
-      });
-  },false);
+  const btnAr = document.querySelector('#mudiBtnAr');
+  if (btnAr) {
+    btnAr.addEventListener('click',()=>{
+        dataLayer.push({
+            'event':'click BTN AR Mudi',
+            'dispositivo':OSdevice,
+            'valorMudi':1,
+            'sku':skuNumber,
+            'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
+            'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
+            'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
+            'retail':company
+        });
+    },false);
+  }
 
   /** Envío de interacción 3D Desk */
-  document.querySelector('#mudiBtn3D').addEventListener('click',()=>{
-      dataLayer.push({
-          'event':'click BTN 3D Mudi',
-          'dispositivo':OSdevice,
-          'valorMudi':1,
-          'sku':skuNumber,
-          'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
-          'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
-          'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
-          'retail':company
-      });
-  },false);
-
+  const btn3D = document.querySelector('#mudiBtn3D');
+  if(btn3D) {
+    btn3D.addEventListener('click',()=>{
+        dataLayer.push({
+            'event':'click BTN 3D Mudi',
+            'dispositivo':OSdevice,
+            'valorMudi':1,
+            'sku':skuNumber,
+            'categoria': document.querySelectorAll('.breadcrumb-alkosto li a')[1] ? document.querySelectorAll('.breadcrumb-alkosto li a')[1].innerHTML :'null',
+            'subcategoria':document.querySelectorAll('.breadcrumb-alkosto li a')[2] ? document.querySelectorAll('.breadcrumb-alkosto li a')[2].innerHTML :'null',
+            'seccion': document.querySelectorAll('.breadcrumb-alkosto li a')[3] ? document.querySelectorAll('.breadcrumb-alkosto li a')[3].innerHTML :'null',
+            'retail':company
+        });
+    },false);
+  }
 };
 
 // function Main
